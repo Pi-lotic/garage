@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src='../static/jquery.min.js'></script>
+		<script src="../static/data.js"></script>
+		<style type="text/css">
+		</style>	
+		<h1>{{ dataSet }}</h1>	
+		<script type="text/javascript">	
+$(document).ready(function(){
+$.get('file:///home/pi/templates/data.csv', function (csv) {
+    $('#container').highcharts({
+        title: {
+            text: 'Monthly Average Temperature',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com',
+            x: -20
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature (°C)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        data: {
+	csv: csv
+        }
+    });
+});
+});
+		</script>
+	</head>
+	<body>
+<script src="../static/highcharts.js"></script>
+<script src="../static/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>

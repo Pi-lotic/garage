@@ -1,0 +1,1 @@
+sudo python3  /home/pi/Gate_moving_GUI.py

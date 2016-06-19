@@ -1,0 +1,29 @@
+<!doctype html>
+
+<meta http-equiv="refresh" content="60; URL=http://raspberrypi/">
+
+<style type="text/css">
+BUTTON.btn1 {height:120px;width:240px;front-size:72px;text-align:center;}
+</style>
+
+<html>
+	<head>
+		<title>Im Büro:</title>
+	</head>
+	<body>
+		{% if TempHum %}
+			<h1>Büro Klima : </h1>
+			<h1>{{ TempHum }}</h1>
+			<img src="../static/Klima.png" width=50% heiht=50% alt="No Image found">
+			<form action"/" method="post">
+			</form>
+		{% else %}
+			<h1>Hallo</h1>
+			<form action"/" method="post">
+			</form>
+		{% endif %}	
+		
+		<button class="btn1" onclick="window.location='http://raspberrypi/LampeAus'">Switch OFF</button>
+		<button class="btn1" onclick="window.location='http://raspberrypi/Chart'">Chart </button>	
+	</body>
+</html>

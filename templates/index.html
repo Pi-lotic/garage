@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+		</style>	
+
+	</head>
+	<body>
+		<div id={{ chartID|safe }} class="chart" style="height: 900px; width: 900px"></div>
+		<script>
+			var chart_id = {{ chartID|safe }}
+			var series = {{ series|safe }}
+			var title = {{ title|safe }}
+			var xAxis = {{ xAxis|safe }}
+			var yAxis = {{ yAxis|safe }}
+			var chart = {{ chart|safe }}
+		</script>
+			<script src="../static/jquery.min.js"></script>
+			<script src="../static/highcharts.js"></script>
+			<script src="../static/graph.js"></script>
+	</body>
+</html>

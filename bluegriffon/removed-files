@@ -1,0 +1,9 @@
+.autoreg
+libjsj.so
+libsqlite3.so
+libxpcom_compat.so
+libxpistub.so
+libzlib.so
+libjemalloc.so
+libmozjs.so
+LICENSE
